@@ -1,0 +1,38 @@
+//Nama    :Dodik Arvianto
+//NIm     :04319004
+//Prodi    :Teknik Informatika/B
+#include <iostream>
+#include<string>
+using namespace std;
+int main() {
+string brg[3][3] = {{"1","Roti","5000"},{"2","Susu","8000"},{"3","Gula","10000"}};
+int kode_brg;
+int hrg;
+int i;
+int jmlh;
+string nm;
+//pendeklarasian id BARANG
+cout << "DAFTAR BARANG YANG DIJUAL"<<endl;
+cout << "ID 1 : Roti"<<endl;
+cout << "ID 1 : Susu"<<endl;
+cout << "ID 3 : Gula"<<endl;
+//Penginputan ID
+cout << "Masukkan ID barang : ";
+cin >> kode_brg;
+cout << "jumlah : ";
+cin >> jmlh;
+//program pengolahan data
+  for (int i = 0;i<5;i++){
+    if (kode_brg==i+1){
+    nm = brg[i][1];
+    hrg = stoi(brg[i][2]);
+    cout << "Beli" << jmlh<<" "<< nm;
+    int total = hrg*jmlh;
+    cout << " total belanja  : Rp." << total;
+    //error ketika ID salah
+  }else if (kode_brg>=4 || kode_brg==0){
+    cout << "kode salah!" << endl;
+    break;
+    }
+  }
+}
